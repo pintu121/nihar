@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-               sh 'https://github.com/Chandandhani/nihar.git'
+               git branch: 'main', url: 'https://github.com/Chandandhani/nihar.git'
             }
         }
 
