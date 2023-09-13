@@ -1,6 +1,9 @@
 pipeline {
-    agent any  // Use any available agent/node
-
+    agent {
+        node {
+            label 'slavenode'
+        }
+    }
     stages {
         stage('Checkout') {
             steps {
