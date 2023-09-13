@@ -19,7 +19,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'docker run -itd --name my-container  myimage:${BUILD_NUMBER}'
+                sh 'docker run -itd --name my-container -p 80:80  myimage:${BUILD_NUMBER}'
             }
         }
 
