@@ -13,13 +13,13 @@ pipeline {
 
         stage('docker Build') {
             steps {
-               sh 'docker build -t nginx:${BUILD_NUMBER}  .'
+               sh 'docker build -t myimage:${BUILD_NUMBER}  .'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'docker run -itd --name nginx  nginx:${BUILD_NUMBER}'
+                sh 'docker run -itd --name my-container  myimage:${BUILD_NUMBER}'
             }
         }
 
